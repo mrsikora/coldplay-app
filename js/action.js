@@ -1,4 +1,4 @@
-const coldplayFlower = document.getElementById("coldplay-flower");
+const flower = document.getElementById("flower");
 const colorWheel = document.getElementById('color-wheel');
 const quoteBackground = document.getElementById('quote');
 const circleElements = document.getElementsByClassName('circle');
@@ -7,15 +7,18 @@ const tabOfColors = ['27, 215, 228', '27, 85, 217', '27, 26, 216', '107, 26, 217
 
 // animation wheel spin added on mouseover flower
 
-coldplayFlower.addEventListener("mouseover", function (event) {
+flower.addEventListener("mouseover", function (event) {
 
     colorWheel.classList.add("color-wheel-animation-speed");
 
+// set pointer
+
+this.classList.add("pointer");
 }, false);
 
 // animation wheel spin removed on mause leave
 
-coldplayFlower.addEventListener("mouseleave", function (event) {
+flower.addEventListener("mouseleave", function (event) {
 
     colorWheel.classList.remove("color-wheel-animation-speed");
 
@@ -23,13 +26,14 @@ coldplayFlower.addEventListener("mouseleave", function (event) {
 
 // animation on click flower
 
-coldplayFlower.addEventListener("click", function (event) {
+flower.addEventListener("click", function (event) {
 
-    // wheel spin
+    // reset pointer
 
-    // colorWheel.classList.add("color-wheel-animation");
+    this.classList.remove("pointer");
+    this.classList.add("standard-cursor");
 
-    // change visibility from hidden to visible
+    // change visibility of wheel from hidden to visible
 
     quoteBackground.classList.remove("not-visible");
     quoteBackground.classList.add("visible");
