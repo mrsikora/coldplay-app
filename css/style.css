@@ -1,0 +1,220 @@
+body {
+	background-color: rgb(22, 21, 26);
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.absoluteCenter {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	/* responsive */
+	width: 80vmin;
+}
+
+.not-visible {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+#flower:hover {
+	cursor: pointer;
+}
+
+/* Animation for color of flower rotate*/
+
+.color-wheel-animation {
+	animation: spin 3s linear;
+}
+
+.color-wheel-animation-speed {
+	animation: spin .5s linear;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Animation for quote background color - change colors */
+.back-color-change {
+	/* background-color: rgb(28, 226, 129);
+	border-color: rgb(28, 226, 129); */
+	/* animation-delay: 3s; */
+	animation: colorchange 2s ease-in;
+}
+
+@keyframes colorchange {
+	0% {
+		background-color: rgb(27, 215, 228);
+		border-color: rgb(27, 215, 228);
+		opacity: 0;
+	}
+
+	10% {
+		background-color: rgb(27, 85, 217);
+		border-color: (27, 85, 217);
+	}
+
+	20% {
+		background-color: rgb(27, 26, 216);
+		border-color: rgb(27, 26, 216);
+	}
+
+	30% {
+		background-color: rgb(107, 26, 217);
+		border-color: rgb(107, 26, 217);
+	}
+
+	40% {
+		background-color: rgb(218, 26, 210);
+		border-color: rgb(218, 26, 210);
+	}
+
+	50% {
+		background-color: rgb(216, 26, 26);
+		border-color: rgb(216, 26, 26);
+	}
+
+	60% {
+		background-color: rgb(219, 80, 26);
+		border-color: rgb(219, 80, 26);
+	}
+
+	70% {
+		background-color: rgb(228, 226, 30);
+		border-color: rgb(228, 226, 30);
+	}
+
+	80% {
+		background-color: rgb(117, 227, 27);
+		border-color: rgb(117, 227, 27);
+	}
+
+	90% {
+		background-color: rgb(27, 218, 26);
+		border-color: rgb(27, 218, 26);
+		opacity: 1;
+	}
+
+	100% {
+		/* here no color set -> in js random set color - without set it here it looks more smoothly */
+		opacity: 1;
+	}
+}
+
+
+/* Animation for quote background color - change opacity */
+@keyframes fadeInFromNone {
+	0% {
+
+		opacity: 0;
+	}
+
+	100% {
+
+		opacity: 1;
+	}
+}
+
+/* flower after click */
+.circle {
+	position: absolute;
+	width: 188px;
+	height: 188px;
+	border-radius: 90px;
+	border-width: 3px;
+	border-style: solid;
+	/* background-color: rgba(215, 27, 202); */
+	/* border-color: rgba(215, 27, 202); */
+	top: calc(50% - 50px);
+	left: calc(50% - 94px);
+	box-sizing: border-box;
+}
+
+/* left-top */
+#l-t {
+	transform: translateY(-43px) rotate(60deg);
+	transform-origin: 50% calc(-50% + 3px);
+}
+
+/* left-center */
+#l-c {
+	transform: translateY(49px) rotate(60deg);
+	transform-origin: 50% calc(-50% + 3px);
+}
+
+/* left-down */
+#l-d {
+	transform: translateY(140px) rotate(60deg);
+	transform-origin: 50% calc(-50% + 3px);
+}
+
+/* left-center-top*/
+#l-c-t {
+	transform: translateY(-136px) rotate(60deg);
+	transform-origin: 50% 1px;
+}
+
+/* left-center-down*/
+#l-c-d {
+	transform: translateY(140px) rotate(60deg);
+	transform-origin: 50% 1px;
+}
+
+/* center-top */
+#c-t {
+	transform: translateY(-228px);
+}
+
+/* center*/
+#c {
+	transform: translateY(-40px);
+}
+
+/* center-down */
+#c-d {
+	transform: translateY(140px);
+}
+
+/* right-center-top */
+#r-c-t {
+	transform: translateY(-136px) rotate(-60deg);
+	transform-origin: 50% 1px;
+}
+
+/* right-center-down */
+#r-c-d {
+	transform: translateY(140px) rotate(-60deg);
+	transform-origin: 50% 1px;
+}
+
+/* right-top */
+#r-t {
+	transform: translateY(-43px) rotate(-60deg);
+	transform-origin: 50% calc(-50% + 3px);
+}
+
+/* right-center */
+#r-c {
+	transform: translateY(49px) rotate(-60deg);
+	transform-origin: 50% calc(-50% + 3px);
+}
+
+/* right-down */
+#r-d {
+	transform: translateY(140px) rotate(-60deg);
+	transform-origin: 50% calc(-50% + 3px);
+}
