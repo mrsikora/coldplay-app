@@ -27,7 +27,7 @@ coldplayFlower.addEventListener("click", function (event) {
 
     // wheel spin
 
-    colorWheel.classList.add("color-wheel-animation");
+    // colorWheel.classList.add("color-wheel-animation");
 
     // change visibility from hidden to visible
 

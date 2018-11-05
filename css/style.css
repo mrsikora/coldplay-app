@@ -30,12 +30,14 @@ body {
 
 /* Animation for color of flower rotate*/
 
-.color-wheel-animation {
+/* .color-wheel-animation {
 	animation: spin 3s linear;
-}
+} */
 
 .color-wheel-animation-speed {
-	animation: spin .5s linear;
+	
+	animation:spin 1s linear infinite;
+	-webkit-animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
@@ -45,6 +47,16 @@ body {
 
 	100% {
 		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
 	}
 }
 
